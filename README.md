@@ -1,13 +1,13 @@
 # Movement Assignment
 The server is a simple RESTFul API service based on the awesome [Nest JS](https://docs.nestjs.com/) framework. \
-The UI built with [Angular 17](https://angular.io/) using [PrimeNG](https://primeng.org/) UI kit. \
+The UI was built with [Angular 17](https://angular.io/) using [PrimeNG](https://primeng.org/) UI kit. \
 The service uses [SQLITE](https://www.sqlite.org/) database, and the ORM framework is [TypeORM](https://typeorm.io/). \
 The [system requirements](https://github.com/shlomielbaz/movement-assignment/blob/main/REQUIRMENTS.md) link.
 
 
 ### API Documentation:
 The URL to the RESTFull API documentation (Swagger) is: HTTP://localhost:3000/api
-<img width="1505" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/6624ee29-5f21-4157-8d3f-a4f176144e95">
+<img width="1458" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/fe3cc277-ffe9-4aa7-af94-658ae8002634">
 
 ### UI Snapshots:
 <img width="1321" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/179f34ec-4ba4-4d0a-bd58-af231bea936e">
