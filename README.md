@@ -10,7 +10,7 @@ The URL to the RESTFull API documentation (Swagger) is: HTTP://localhost:3000/ap
 <img width="1458" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/fe3cc277-ffe9-4aa7-af94-658ae8002634">
 
 ### UI Snapshots:
-<img width="1321" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/179f34ec-4ba4-4d0a-bd58-af231bea936e">
+<img width="1298" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/8a44ab23-2cc8-4485-a076-ce9ec70aedd4">
 
 <img width="763" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/404cce4a-8f07-49de-8f17-fbca0e164214">
 
