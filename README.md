@@ -4,7 +4,6 @@ The UI was built with [Angular 17](https://angular.io/) using [PrimeNG](https://
 The service uses [SQLITE](https://www.sqlite.org/) database, and the ORM framework is [TypeORM](https://typeorm.io/). \
 The [system requirements](https://github.com/shlomielbaz/movement-assignment/blob/main/REQUIRMENTS.md) link.
 
-
 ### API Documentation:
 The URL to the RESTFull API documentation (Swagger) is: HTTP://localhost:3000/api
 <img width="1458" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/fe3cc277-ffe9-4aa7-af94-658ae8002634">
@@ -16,6 +15,16 @@ The URL to the RESTFull API documentation (Swagger) is: HTTP://localhost:3000/ap
 
 <img width="765" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/8861f84a-64dd-4c10-9401-76214870c0c9">
 
+
+### Installation:
+For server installation, get into api-servoce directory and run the following CLI commands
+```bash
+npm install --force
+```
+For client installation, get into ui-servoce directory and run the following CLI commands
+```bash
+npm install
+```
 
 ### Running the application using docker-compose
 From the application root directory run the following CLI commands
