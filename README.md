@@ -5,6 +5,12 @@ The [system requirements](https://github.com/shlomielbaz/movement-assignment/blo
 The URL to the RESTFull API documentation (Swagger) is: HTTP://localhost:3000/api
 <img width="1505" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/6624ee29-5f21-4157-8d3f-a4f176144e95">
 
+### UI Snapshots:
+<img width="1321" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/179f34ec-4ba4-4d0a-bd58-af231bea936e">
+
+<img width="763" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/404cce4a-8f07-49de-8f17-fbca0e164214">
+
+<img width="765" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/8861f84a-64dd-4c10-9401-76214870c0c9">
 
 
 ### Running the application using docker-compose
