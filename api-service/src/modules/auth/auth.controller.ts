@@ -54,10 +54,4 @@ export class AuthController {
       throw new InternalServerErrorException(err);
     }
   }
-
-  @UseGuards(AuthGuard)
-  @Get('profile')
-  getProfile(@Request() req) {
-    return req.user;
-  }
 }

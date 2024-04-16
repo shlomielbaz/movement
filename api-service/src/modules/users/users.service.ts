@@ -12,6 +12,12 @@ import { catchError, firstValueFrom } from 'rxjs';
 
 @Injectable()
 export class UsersService {
+  constructor(
+    @InjectRepository(User)
+    private readonly userRepository: Repository<User>,
+    private readonly http: HttpService,
+  ) {}
+
   createUser(body: UserDto) {
     throw new Error('Method not implemented.');
   }
@@ -37,11 +43,6 @@ export class UsersService {
 
     return data;
   }
-  constructor(
-    @InjectRepository(User)
-    private readonly userRepository: Repository<User>,
-    private readonly http: HttpService,
-  ) {}
 
   async getUsers(page: number) {
     const URL = `${constants.external_url}/api/users?page=${page}`;

@@ -1,1 +1,7 @@
+<div class="flex overflow-hidden" *ngIf="isLogged">
+    <div class="flex-none flex align-items-center justify-content-center font-bold m-2 border-round">
+        <p-button label="Logout" severity="secondary" (click)="userLogout()"></p-button>
+    </div>
+</div>
+
 <router-outlet />
