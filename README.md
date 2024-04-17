@@ -82,3 +82,69 @@ docker-compose up
 #### Docker Desktop:
 <img width="1243" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/0c8cf2c6-af73-47ab-b86e-6364ab0605fe">
 
+## Project Structure:
+```
+├── api-service
+│   └── src
+│       ├── data
+│       │   └── constants.ts
+│       ├── entities
+│       │   └── user.entity.ts
+│       ├── main.ts
+│       └── modules
+│           ├── app
+│           │   ├── app.controller.ts
+│           │   ├── app.module.ts
+│           │   └── app.service.ts
+│           ├── auth
+│           │   ├── auth.controller.ts
+│           │   ├── auth.guard.ts
+│           │   ├── auth.module.ts
+│           │   └── auth.service.ts
+│           └── users
+│               ├── dtos
+│               │   ├── create-user.dto.ts
+│               │   ├── update-user.dto.ts
+│               │   └── user.dto.ts
+│               ├── users.controller.ts
+│               ├── users.module.ts
+│               └── users.service.ts
+└── ui-service
+    └── src
+        ├── app
+        │   ├── app.component.html
+        │   ├── app.component.ts
+        │   ├── classes
+        │   │   └── user.ts
+        │   ├── components
+        │   │   ├── login
+        │   │   │   ├── login.component.html
+        │   │   │   ├── login.component.scss
+        │   │   │   └── login.component.ts
+        │   │   ├── page-not-found
+        │   │   │   ├── page-not-found.component.html
+        │   │   │   ├── page-not-found.component.scss
+        │   │   │   └── page-not-found.component.ts
+        │   │   ├── register
+        │   │   │   ├── register.component.html
+        │   │   │   ├── register.component.scss
+        │   │   │   └── register.component.ts
+        │   │   └── users
+        │   │       ├── users.component.html
+        │   │       ├── users.component.scss
+        │   │       └── users.component.ts
+        │   ├── services
+        │   │   ├── auth.service.ts
+        │   │   └── users.service.ts
+        │   └── utils
+        │       ├── app.config.ts
+        │       ├── app.routes.ts
+        │       ├── auth.guard.ts
+        │       ├── constants.ts
+        │       └── jwt.interceptor.ts
+        ├── assets
+        ├── index.html
+        ├── main.ts
+        └── styles.scss
+```
+
