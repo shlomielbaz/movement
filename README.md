@@ -119,8 +119,6 @@ docker-compose up
         ├── app
         │   ├── app.component.html
         │   ├── app.component.ts
-        │   ├── classes
-        │   │   └── user.ts
         │   ├── components
         │   │   ├── login
         │   │   │   ├── login.component.html
@@ -138,6 +136,8 @@ docker-compose up
         │   │       ├── users.component.html
         │   │       ├── users.component.scss
         │   │       └── users.component.ts
+        │   ├── interfaces
+        │   │   └── user.ts
         │   ├── services
         │   │   ├── auth.service.ts
         │   │   └── users.service.ts
