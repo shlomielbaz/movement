@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { PaginatorModule } from 'primeng/paginator';
 import { TableModule } from 'primeng/table';
-import { User } from '../../classes/user';
 import { UsersService } from '../../services/users.service';
 import { ButtonModule } from 'primeng/button';
+import { IUser } from '../../interfaces/user';
 
 @Component({
   selector: 'app-users',
@@ -13,7 +13,7 @@ import { ButtonModule } from 'primeng/button';
   styleUrl: './users.component.scss',
 })
 export class UsersComponent {
-  users!: User[];
+  users!: IUser[];
 
   constructor(private service: UsersService) {}
 
