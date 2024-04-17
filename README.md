@@ -11,7 +11,7 @@ The URL to the RESTFull API documentation (Swagger) is: HTTP://localhost:3000/ap
 ## Authentication:
 The service uses the JWT authentication mechanism, and protected API endpoints are limited to access by ```@UseGuards(AuthGuard)```, where only the requests with header ``` Authorization: Bearer ${token} ``` allow access to the resource.
 
-<img width="971" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/868d739c-649b-4e0b-b963-110a078e4d77">
+<img width="612" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/43c52bc7-cb0c-4d61-9dc7-8a7e95232ac7">
 
 #### Generate TOKEN_SECRET using CLI:
 ```javascript
