@@ -56,8 +56,7 @@ As mentioned, the service uses an SQLite database, the setting:
 
 <img width="763" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/404cce4a-8f07-49de-8f17-fbca0e164214">
 
-<img width="765" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/8861f84a-64dd-4c10-9401-76214870c0c9">
-
+<img width="764" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/a4968d3a-0b3d-4d85-aadf-daa3b601c44e">
 
 ### Installation:
 For server installation, get into api-servoce directory and run the following CLI commands
