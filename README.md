@@ -21,7 +21,7 @@ node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"
 The API access failures are caught automatically and it's delivered by ```NestJS```.
 
 ## CORS Configuration:
-The CORS settings are in the server bootstrap,
+The CORS settings are in the server bootstrap, enabling access to the UI service, Google, and Facebook.
 
 ```javascript
   app.enableCors({
@@ -33,6 +33,7 @@ The CORS settings are in the server bootstrap,
     ],
   });
 ```
+The ``` http://localhost:4200 ``` is the client URL.
 
 ## Design Patterns and Code Quality:
 The server (api-service) is organized in a module pattern where a bunch of common operations are encapsulated in module scope, some classes are set as **_injectable_** to utilize **_Dependency injection_** to get more decoupled code, also a **_Repository Pattern_** and **_Façade Pattern_** is reached by **_TypeORM_** and more...
@@ -68,7 +69,11 @@ For client installation, get into ui-servoce directory and run the following CLI
 npm install
 ```
 
-### Running the application using docker-compose
+### Running the application:
+#### Using CLI
+From ui-service and api-service folders run ``` npm start ```.
+
+#### Using docker-compose
 From the application root directory run the following CLI commands
 ```bash
 docker-compose build
