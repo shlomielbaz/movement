@@ -45,7 +45,7 @@ The client (ui-service) also uses **_injectable_** objects and **_Observer Patte
 
 ## Data Storage:
 As mentioned, the service uses an SQLite database, the setting:
-```
+```javascript
   TypeOrmModule.forRoot({
       type: 'sqlite',
       database: 'src/data/db',
@@ -90,7 +90,7 @@ docker-compose up
 <img width="1243" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/0c8cf2c6-af73-47ab-b86e-6364ab0605fe">
 
 ## Project Structure:
-```
+```bash
 ├── api-service
 │   └── src
 │       ├── data
