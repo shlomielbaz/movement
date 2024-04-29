@@ -1,13 +1,13 @@
-FROM node:latest
+FROM node:20-alpine
 
 WORKDIR /app
 
-COPY package.json ./
+COPY . /app
 
-RUN npm install --force
+RUN npm install -g @angular/cli
 
-COPY . .
+RUN npm install
 
 EXPOSE 4200
 
-CMD ["npm", "start"]
+CMD ["ng", "serve", "--host", "0.0.0.0"]

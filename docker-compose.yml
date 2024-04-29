@@ -1,22 +1,23 @@
 version: '3.8'
 services:
-  # db:
-  #   container_name: movement-db
-  #   image: mysql:8.0
-  #   cap_add:
-  #     - SYS_NICE
-  #   restart: always
-  #   environment:
-  #     - MYSQL_DATABASE=movement_db
-  #     - MYSQL_ROOT_PASSWORD=ROOT#@DB!123
-  #   ports:
-  #     - '3306:3306'
-  #   volumes:
-  #     - ./init-scripts:/docker-entrypoint-initdb.d
-  #   networks:
-  #     - movement-network
+  db:
+    container_name: movement_db
+    image: mysql:8.0
+    cap_add:
+      - SYS_NICE
+    restart: always
+    environment:
+      - MYSQL_DATABASE=movement_db
+      - MYSQL_ROOT_PASSWORD=ROOT#@DB!123
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./init-scripts:/docker-entrypoint-initdb.d
+      - db-data:/var/lib/mysql
+    networks:
+      - db_network
   ui:
-    container_name: movement-ui
+    container_name: movement_ui
     build:
       context: ./ui-service/
       dockerfile: Dockerfile
@@ -24,11 +25,11 @@ services:
       - '4200:4200'
     restart: on-failure
     networks:
-      - movement-network
+      - ui_network
     volumes:
       - ./:/src
   api:
-    container_name: movement-api
+    container_name: movement_api
     build:
       context: ./api-service/
       dockerfile: Dockerfile
@@ -41,16 +42,22 @@ services:
       DB_USER: root
       DB_PASSWORD: ROOT#@DB!123
       DB_NAME: movement_db
-    # depends_on:
-    #   - db
+      JWT_SECRET: iIsEPkkK640QTMPzbtJG+zl3Mf6C+uKBrsDrRIVNuYuM0EhupGlY0EldoYKVuH+6tw8euQXIBFi1JqK33p1tr0xdQSB7GXI5nx9BPl43Ln4LYkInzfYsdwX/7V2vwDoKxIqUz6hPA7corpBo2kwd3K6QKqr4QQlEUhTb5t77ozI=
+    depends_on:
+      - db
     networks:
-      - movement-network
+      - db_network
+      - ui_network
     volumes:
       - ./:/src
-# volumes:
-#   db:
-#     driver: local
-    
+      
+volumes:
+  db:
+    driver: local
+  db-data:
+
 networks:
-  movement-network:
+  db_network:
+    driver: bridge
+  ui_network:
     driver: bridge

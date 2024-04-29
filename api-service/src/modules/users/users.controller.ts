@@ -17,7 +17,7 @@ import { AuthGuard } from '../auth/auth.guard';
 import { UserDto } from './dtos/user.dto';
 import { HttpService } from '@nestjs/axios';
 
-@Controller('users')
+@Controller('api/users')
 export class UsersController {
   constructor(
     private readonly http: HttpService,

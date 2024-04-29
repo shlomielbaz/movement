@@ -4,6 +4,7 @@ import { Constants } from '../utils/constants';
 import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { Observable, Subject } from 'rxjs';
+import { IUser } from '../interfaces/user';
 
 @Injectable({
   providedIn: 'root',
@@ -41,6 +42,16 @@ export class AuthService {
         username: email,
         password: password,
       })
+      .subscribe((data: any) => {
+        localStorage.setItem('access_token', data.token);
+        this.router.navigate(['users'], { replaceUrl: true });
+        this.isLogged = true;
+      });
+  }
+
+  register(payload: IUser) {
+    this.http
+      .post(`${Constants.SERVER_URL}/auth/register`, JSON.stringify(payload))
       .subscribe((data: any) => {
         localStorage.setItem('access_token', data.token);
         this.router.navigate(['users'], { replaceUrl: true });
