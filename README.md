@@ -5,12 +5,15 @@ The service uses [SQLite](https://www.sqlite.org/) database, and the ORM framewo
 The [system requirements](https://github.com/shlomielbaz/movement-assignment/blob/main/REQUIRMENTS.md) link.
 
 ## Endpoints:
-The URL to the RESTFull API documentation (Swagger) is: HTTP://localhost:3000/api
+The URL to the RESTFull API documentation is: HTTP://localhost:3000/api
+
+#### Swagger snapshot:
 <img width="1458" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/fe3cc277-ffe9-4aa7-af94-658ae8002634">
 
 ## Authentication:
 The service uses the JWT authentication mechanism, and protected API endpoints are limited to access by ```@UseGuards(AuthGuard)```, where only the requests with header ``` Authorization: Bearer ${token} ``` allow access to the resource.
 
+#### JWT flow schema:
 <img width="612" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/43c52bc7-cb0c-4d61-9dc7-8a7e95232ac7">
 
 #### Generate TOKEN_SECRET using CLI:
@@ -42,7 +45,7 @@ The client (ui-service) also uses **_injectable_** objects and **_Observer Patte
 
 ## Data Storage:
 As mentioned, the service uses an SQLite database, the setting:
-```
+```javascript
   TypeOrmModule.forRoot({
       type: 'sqlite',
       database: 'src/data/db',
@@ -87,7 +90,7 @@ docker-compose up
 <img width="1243" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/0c8cf2c6-af73-47ab-b86e-6364ab0605fe">
 
 ## Project Structure:
-```
+```bash
 ├── api-service
 │   └── src
 │       ├── data
