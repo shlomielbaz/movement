@@ -100,10 +100,12 @@ docker-compose up
 <img width="1243" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/0c8cf2c6-af73-47ab-b86e-6364ab0605fe">
 
 ## Project Structure:
+Running the Linux command: ```tree -P '*.ts|*.html|*.css|*.scss' -I 'node_modules|cache|test|dist|*.spec.ts'``` result the following tree structure:
 ```bash
 ├── api-service
 │   └── src
-│       ├── data
+│       ├── config
+│       │   ├── configuration.ts
 │       │   └── constants.ts
 │       ├── entities
 │       │   └── user.entity.ts
@@ -126,12 +128,17 @@ docker-compose up
 │               ├── users.controller.ts
 │               ├── users.module.ts
 │               └── users.service.ts
+├── init-scripts
 └── ui-service
     └── src
         ├── app
         │   ├── app.component.html
         │   ├── app.component.ts
         │   ├── components
+        │   │   ├── forgot-password
+        │   │   │   ├── forgot-password.component.html
+        │   │   │   ├── forgot-password.component.scss
+        │   │   │   └── forgot-password.component.ts
         │   │   ├── login
         │   │   │   ├── login.component.html
         │   │   │   ├── login.component.scss
