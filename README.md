@@ -67,15 +67,14 @@ As mentioned, the service uses an SQLite database, the setting:
 
 ## Frontend & UI Snapshots:
 <img width="1298" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/8a44ab23-2cc8-4485-a076-ce9ec70aedd4">
-
-<img width="763" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/404cce4a-8f07-49de-8f17-fbca0e164214">
-
+<img width="768" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/1bbb4bd4-0736-4953-a823-cd8e7aeed587">
+<img width="768" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/f46276d1-a392-4fb2-a266-ea732eee65e2">
 <img width="764" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/a4968d3a-0b3d-4d85-aadf-daa3b601c44e">
 
 ### Installation:
 For server installation, get into api-servoce directory and run the following CLI commands
 ```bash
-npm install --force
+npm install
 ```
 For client installation, get into ui-servoce directory and run the following CLI commands
 ```bash
