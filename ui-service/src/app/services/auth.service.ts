@@ -51,7 +51,7 @@ export class AuthService {
 
   register(payload: IUser) {
     this.http
-      .post(`${Constants.SERVER_URL}/auth/register`, JSON.stringify(payload))
+      .post(`${Constants.SERVER_URL}/auth/register`, payload)
       .subscribe((data: any) => {
         this.router.navigate(['login'], { replaceUrl: true });
       });

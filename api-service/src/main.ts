@@ -3,7 +3,12 @@ import { AppModule } from './modules/app/app.module';
 import { constants } from './config/constants';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 
-async function bootstrap() {
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const dotenv = require('dotenv');
+
+dotenv.config();
+
+(async () => {
   const app = await NestFactory.create(AppModule);
 
   app.use((req, res, next) => {
@@ -35,5 +40,4 @@ async function bootstrap() {
   await app.listen(constants.port).then(() => {
     console.log(`listening to port: ${constants.port}`);
   });
-}
-bootstrap();
+})();

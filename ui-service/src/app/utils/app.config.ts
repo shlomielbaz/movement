@@ -6,6 +6,9 @@ import { routes } from './app.routes';
 import { jwtInterceptor } from './jwt.interceptor';
 import { JwtModule } from '@auth0/angular-jwt';
 
+import { provideAnimations } from '@angular/platform-browser/animations';
+
+
 export function tokenGetter() {
   return localStorage.getItem("access_token");
 }
@@ -21,6 +24,7 @@ export const appConfig: ApplicationConfig = {
         },
     }),
     ),
-    provideRouter(routes)
+    provideRouter(routes),
+    provideAnimations()
   ]
 };

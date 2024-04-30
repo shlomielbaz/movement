@@ -38,6 +38,7 @@ services:
     restart: on-failure
     environment:
       NODE_ENV: production
+      CLIENT_HOST: ui
       DB_HOST: db
       DB_PORT: 3306
       DB_USER: root

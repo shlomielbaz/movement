@@ -11,22 +11,22 @@ export class UsersService {
   constructor(private http: HttpClient) {}
 
   getUser(id: number): Observable<IUser> {
-    return this.http.get(`${Constants.SERVER_URL}/users/${id}`);
+    return this.http.get(`${Constants.SERVER_URL}/api/users/${id}`);
   }
 
   geyUsers(): Observable<IUser[]> {
-    return this.http.get<IUser[]>(`${Constants.SERVER_URL}/users`);
+    return this.http.get<IUser[]>(`${Constants.SERVER_URL}/api/users`);
   }
 
   updateUser(payload: IUser): void {
-    this.http.put(`${Constants.SERVER_URL}/users`, payload);
+    this.http.put(`${Constants.SERVER_URL}/api/users`, payload);
   }
 
   addUser(payload: IUser): void {
-    this.http.post(`${Constants.SERVER_URL}/users`, payload);
+    this.http.post(`${Constants.SERVER_URL}/api/users`, payload);
   }
 
   delUser(id: number): void {
-    this.http.delete(`${Constants.SERVER_URL}/users/${id}`);
+    this.http.delete(`${Constants.SERVER_URL}/api/users/${id}`);
   }
 }
