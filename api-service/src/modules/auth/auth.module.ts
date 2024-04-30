@@ -6,7 +6,7 @@ import { UsersService } from 'src/modules/users/users.service';
 import { User } from 'src/entities/user.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { JwtModule } from '@nestjs/jwt';
-import { jwtConstants } from '../../data/constants';
+import { jwtConstants } from '../../config/constants';
 import { HttpModule } from '@nestjs/axios';
 // import { AuthGuard } from './auth.guard';
 // import { APP_GUARD } from '@nestjs/core';

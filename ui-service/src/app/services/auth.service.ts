@@ -53,9 +53,7 @@ export class AuthService {
     this.http
       .post(`${Constants.SERVER_URL}/auth/register`, JSON.stringify(payload))
       .subscribe((data: any) => {
-        localStorage.setItem('access_token', data.token);
-        this.router.navigate(['users'], { replaceUrl: true });
-        this.isLogged = true;
+        this.router.navigate(['login'], { replaceUrl: true });
       });
   }
 }
