@@ -41,7 +41,7 @@ The ``` http://localhost:4200 ``` is the client URL.
 ## Design Patterns and Code Quality:
 The server (api-service) is organized in a module pattern where a bunch of common operations are encapsulated in module scope, some classes are set as **_injectable_** to utilize **_Dependency injection_** to get more decoupled code, also a **_Repository Pattern_** and **_Façade Pattern_** is reached by **_TypeORM_** and more...
 
-The client (ui-service) also uses **_injectable_** objects and **_Observer Pattern_** and more...
+The client (ui-service) also uses **_Inversion of Control_** **_Dependency Injection_** (IoC/DI) by injectable objects and Factories, and, **_Observer Pattern_** and more...
 
 ## Data Storage:
 As mentioned, the service uses an SQLite database, the setting:
@@ -52,19 +52,29 @@ As mentioned, the service uses an SQLite database, the setting:
       synchronize: true,
       entities: [User],
     }),
+    // TypeOrmModule.forRoot({
+    //   type: 'mysql',
+    //   host: process.env.DB_HOST,
+    //   port: parseInt(process.env.DB_PORT, 10),
+    //   username: process.env.DB_USER,
+    //   password: process.env.DB_PASSWORD,
+    //   database: process.env.DB_NAME,
+    //   synchronize: true,
+    //   autoLoadEntities: true,
+    //   entities: [User],
+    // }),
 ```
 
 ## Frontend & UI Snapshots:
 <img width="1298" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/8a44ab23-2cc8-4485-a076-ce9ec70aedd4">
-
-<img width="763" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/404cce4a-8f07-49de-8f17-fbca0e164214">
-
+<img width="768" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/1bbb4bd4-0736-4953-a823-cd8e7aeed587">
+<img width="768" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/f46276d1-a392-4fb2-a266-ea732eee65e2">
 <img width="764" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/a4968d3a-0b3d-4d85-aadf-daa3b601c44e">
 
 ### Installation:
 For server installation, get into api-servoce directory and run the following CLI commands
 ```bash
-npm install --force
+npm install
 ```
 For client installation, get into ui-servoce directory and run the following CLI commands
 ```bash
@@ -90,10 +100,12 @@ docker-compose up
 <img width="1243" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/0c8cf2c6-af73-47ab-b86e-6364ab0605fe">
 
 ## Project Structure:
+Running the Linux command: ```tree -P '*.ts|*.html|*.css|*.scss' -I 'node_modules|cache|test|dist|*.spec.ts'``` result the following tree structure:
 ```bash
 ├── api-service
 │   └── src
-│       ├── data
+│       ├── config
+│       │   ├── configuration.ts
 │       │   └── constants.ts
 │       ├── entities
 │       │   └── user.entity.ts
@@ -116,12 +128,17 @@ docker-compose up
 │               ├── users.controller.ts
 │               ├── users.module.ts
 │               └── users.service.ts
+├── init-scripts
 └── ui-service
     └── src
         ├── app
         │   ├── app.component.html
         │   ├── app.component.ts
         │   ├── components
+        │   │   ├── forgot-password
+        │   │   │   ├── forgot-password.component.html
+        │   │   │   ├── forgot-password.component.scss
+        │   │   │   └── forgot-password.component.ts
         │   │   ├── login
         │   │   │   ├── login.component.html
         │   │   │   ├── login.component.scss
