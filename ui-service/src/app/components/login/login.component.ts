@@ -16,9 +16,13 @@ export class LoginComponent {
   @Input() email: string  = '';
   @Input() password: string  = '';  
   rememberme: boolean = false;
+  isValid: boolean = false;
 
   constructor(private auth: AuthService) {
   
+  }
+  formValidate() {
+    this.isValid = this.email.trim().length > 0 && this.password.trim().length > 0 || false;
   }
 
   userLogin() {

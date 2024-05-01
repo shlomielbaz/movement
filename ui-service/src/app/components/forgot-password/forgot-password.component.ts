@@ -13,6 +13,7 @@ import { InputTextModule } from 'primeng/inputtext';
 export class ForgotPasswordComponent {
 
   @Input() email: string = '';
+  isValid: boolean = false;
 
   passwordReminder() {
     console.log('password reminder');
