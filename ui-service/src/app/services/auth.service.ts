@@ -1,9 +1,9 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Constants } from '../utils/constants';
 import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { Observable, Subject } from 'rxjs';
+import { Observable, Subject, throwError } from 'rxjs';
 import { IUser } from '../interfaces/user';
 
 @Injectable({
@@ -36,16 +36,17 @@ export class AuthService {
     this.isLogged = false;
   }
 
+  signIn(data: any) {
+    localStorage.setItem('access_token', data.token);
+    this.router.navigate(['users'], { replaceUrl: true });
+    this.isLogged = true;
+  }
+
   login(email: string, password: string) {
-    this.http
+    return this.http
       .post(`${Constants.SERVER_URL}/auth/login`, {
         username: email,
         password: password,
-      })
-      .subscribe((data: any) => {
-        localStorage.setItem('access_token', data.token);
-        this.router.navigate(['users'], { replaceUrl: true });
-        this.isLogged = true;
       });
   }
 
