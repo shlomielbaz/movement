@@ -7,7 +7,7 @@ The [system requirements](https://github.com/shlomielbaz/movement-assignment/blo
 ## Endpoints:
 The URL to the RESTFull API documentation is: HTTP://localhost:3000/api
 
-#### Swagger snapshot:
+#### Swagger snapshot :
 <img width="1458" alt="image" src="https://github.com/shlomielbaz/movement-assignment/assets/426076/fe3cc277-ffe9-4aa7-af94-658ae8002634">
 
 ## Authentication:
