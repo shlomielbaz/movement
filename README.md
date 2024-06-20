@@ -4,6 +4,8 @@ The UI was built with [Angular 17](https://angular.io/) using [PrimeNG](https://
 The service uses [SQLite](https://www.sqlite.org/) database, and the ORM framework is [TypeORM](https://typeorm.io/). \
 The [system requirements](https://github.com/shlomielbaz/movement-assignment/blob/main/REQUIRMENTS.md) link.
 
+## Add Commands
+
 ## Endpoints:
 The URL to the RESTFull API documentation is: HTTP://localhost:3000/api
 
